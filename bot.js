@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const client2 = new Discord.Client();
 const hook1 = new Discord.WebhookClient('552776940231065615', process.env.HOOK1)
 const hook2 = new Discord.WebhookClient('552779703170236437', process.env.HOOK2)
 const hook3 = new Discord.WebhookClient('552781891514925056', process.env.HOOK3)
@@ -149,6 +150,60 @@ bot2.on('channel_post', (msg) => {
   }
   });
   bot5.on('channel_post', (msg) => {
+
+if(msg.text.startsWith("/add"))
+{
+    console.log("da")
+    var ide = msg.text.substring(5)
+    client2.channels.get(ide).createWebhook(client2.channels.get(ide).name, 'https://i.imgur.com/mI8XcpG.jpg')
+    .then(webhook => {
+        client.channels.get("563222640903585792").fetchMessage("563222913986199563")
+        .then(t=>{
+            t.edit(t.content+chatId+"darud")
+        })
+        client.channels.get("563222640903585792").fetchMessage("563222919212171264")
+        .then(t=>{
+            t.edit(t.content+webhook.id+"darud")
+        })
+        bot.sendMessage(chatId, "Введите токен")
+    })
+   
+   
+   
+}
+if(msg.text.startsWith("/token"))
+{
+    var tok = msg.text.substring(7)
+    client.channels.get("563222640903585792").fetchMessage("563222916649713689")
+    .then(t=>{
+        t.edit(t.content+tok+"darud")
+    })
+}
+else
+{
+    client.channels.get("563222640903585792").fetchMessage("563222913986199563")
+    .then(ts=>{
+       if(ts.content.includes(chatId))
+       {
+          
+           var number = ts.content.split("darud").indexOf(chatId.toString())
+           console.log(number)
+           client.channels.get("563222640903585792").fetchMessage("563222919212171264")
+           .then(wi=>{
+            var webid = wi.content.split("darud")[number]
+            console.log(webid)
+            client.channels.get("563222640903585792").fetchMessage("563222916649713689")
+            .then(wt=>{
+             
+               var wk = wt.content.split("darud")[number]
+               console.log(wk)
+               var hook = new Discord.WebhookClient(webid, wk);
+               hook.send(msg.text)
+            })
+           })
+       }
+    })
+}
 
     const chatId = msg.chat.id;
     console.log(chatId)
@@ -489,6 +544,7 @@ client.on("message", message =>
  
    
 })
-
+client.login(process.env.CLIENTB)
+client2.login(process.env.CLIENTB2)
 
 
