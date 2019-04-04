@@ -151,6 +151,7 @@ bot2.on('channel_post', (msg) => {
   });
   bot5.on('channel_post', (msg) => {
     const chatId = msg.chat.id;
+    console.log("post")
 if(msg.text.startsWith("/add"))
 {
     console.log("da")
