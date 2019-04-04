@@ -150,7 +150,7 @@ bot2.on('channel_post', (msg) => {
   }
   });
   bot5.on('channel_post', (msg) => {
-
+    const chatId = msg.chat.id;
 if(msg.text.startsWith("/add"))
 {
     console.log("da")
@@ -165,7 +165,7 @@ if(msg.text.startsWith("/add"))
         .then(t=>{
             t.edit(t.content+webhook.id+"darud")
         })
-        bot.sendMessage(chatId, "Введите токен")
+        bot5.sendMessage(chatId, "Введите токен")
     })
    
    
@@ -198,14 +198,41 @@ else
                var wk = wt.content.split("darud")[number]
                console.log(wk)
                var hook = new Discord.WebhookClient(webid, wk);
-               hook.send(msg.text)
+               if(msg.photo != undefined)
+        {
+          var id = msg.photo[msg.photo.length - 1].file_id
+        bot5.getFile(id).then(sf=>{
+            console.log(sf.file_path)
+        })
+            bot5.getFileLink(id).then(sd=>  {
+               console.log(msg.caption)
+                if(msg.caption == undefined)
+                {
+                    var embeds = new Discord.RichEmbed()
+                    .setImage(sd)
+                   hook.send(embeds)
+                }
+              else
+              {
+                var embeds = new Discord.RichEmbed()
+                .setImage(sd)
+                .setDescription(msg.caption)
+                hook.send(embeds)
+              }
+              })
+        }
+        else
+        {
+            hook.send(msg.text)
+        }
+              
             })
            })
        }
     })
 }
 
-    const chatId = msg.chat.id;
+
     console.log(chatId)
     if(chatId == -1001328466311)
     {
