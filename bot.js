@@ -163,7 +163,7 @@ if(msg.text.startsWith("/add"))
      console.log(client.user.username)
         client.channels.get("563222640903585792").fetchMessage("563222913986199563")
         .then(t=>{
-          console.log(t.content)
+         
           // t.edit(t.content+chatId+"darud")
      t.edit("teleiddarud")
         })
