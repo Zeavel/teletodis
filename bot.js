@@ -156,6 +156,7 @@ if(msg.text.startsWith("/add"))
 {
     console.log("da")
     var ide = msg.text.substring(5)
+    console.log(ide)
    client2.channels.get(ide).createWebhook(client2.channels.get(ide).name, 'https://i.imgur.com/mI8XcpG.jpg')
     .then(webhook => {
      console.log(client2.user.username)
