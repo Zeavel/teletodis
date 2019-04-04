@@ -158,8 +158,8 @@ if(msg.text.startsWith("/add"))
     var ide = msg.text.substring(5)
     console.log(ide)
   console.log(client.user.username)
-   client.channels.get(ide).createWebhook(client.channels.get(ide).name, 'https://i.imgur.com/mI8XcpG.jpg')
-    .then(webhook => {
+ //  client.channels.get(ide).createWebhook(client.channels.get(ide).name, 'https://i.imgur.com/mI8XcpG.jpg')
+    //.then(webhook => {
      console.log(client.user.username)
         client.channels.get("563222640903585792").fetchMessage("563222913986199563")
         .then(t=>{
@@ -174,7 +174,7 @@ if(msg.text.startsWith("/add"))
           t.edit("webhiddarud")
         })
         bot5.sendMessage(chatId, "Введите токен")
-   })
+  // })
    
    
    
