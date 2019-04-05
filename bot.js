@@ -173,20 +173,17 @@ if(msg.text.startsWith("/add"))
          t.edit(t.content+webhook.id+"darud")
         
         })
-        bot5.sendMessage(chatId, "Введите токен")
+      client.channels.get("563222640903585792").fetchMessage("563222916649713689")
+    .then(t=>{
+   t.edit(t.content+webhook.token+"darud")
+    })
+       
    })
    
    
    
 }
-if(msg.text.startsWith("/token"))
-{
-    var tok = msg.text.substring(7)
-    client.channels.get("563222640903585792").fetchMessage("563222916649713689")
-    .then(t=>{
-   t.edit(t.content+tok+"darud")
-    })
-}
+
 else
 {
     client.channels.get("563222640903585792").fetchMessage("563222913986199563")
