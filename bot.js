@@ -420,6 +420,36 @@ else
             hook10.send(msg.text)
         } 
     }
+    if(chatId == -1001492332397)
+    {
+        if(msg.photo != undefined)
+        {
+          var id = msg.photo[msg.photo.length - 1].file_id
+        bot5.getFile(id).then(sf=>{
+            console.log(sf.file_path)
+        })
+            bot5.getFileLink(id).then(sd=>  {
+               console.log(msg.caption)
+                if(msg.caption == undefined)
+                {
+                    var embeds = new Discord.RichEmbed()
+                    .setImage(sd)
+                   hook10.send(embeds)
+                }
+              else
+              {
+                var embeds = new Discord.RichEmbed()
+                .setImage(sd)
+                .setDescription(msg.caption)
+                hook10.send(embeds)
+              }
+              })
+        }
+        else
+        {
+            hook10.send(msg.text)
+        } 
+    }
     if(chatId == -1001352580875)
     {
         if(msg.photo != undefined)
