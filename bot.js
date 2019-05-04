@@ -424,6 +424,7 @@ else
     {
         if(msg.photo != undefined)
         {
+            console.log("uesr")
           var id = msg.photo[msg.photo.length - 1].file_id
         bot5.getFile(id).then(sf=>{
             console.log(sf.file_path)
