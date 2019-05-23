@@ -165,7 +165,7 @@ bot2.on('channel_post', (msg) => {
      console.log(5)
     const chatId = msg.chat.id;
     console.log(chatId)
-if(msg.text.startsWith("/add"))
+/*if(msg.text.startsWith("/add"))
 {
     console.log("da")
     var ide = msg.text.substring(5)
@@ -198,7 +198,7 @@ if(msg.text.startsWith("/add"))
 }
 
 else
-{
+{*/
     console.log("ne nachibaetsa")
     /*client.channels.get("563222640903585792").fetchMessage("563222913986199563")
     .then(ts=>{
@@ -553,7 +553,7 @@ else
             hook13.send(msg.text)
         } 
     }
-}
+
 
 
     
