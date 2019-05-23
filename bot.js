@@ -11,12 +11,12 @@ const hook5 = new Discord.WebhookClient('552784608916144129', process.env.HOOK5)
 const hook6 = new Discord.WebhookClient('552785272706957334', process.env.HOOK6)
 const hook7 = new Discord.WebhookClient('552788071482130453', process.env.HOOK7)
 const hook8 = new Discord.WebhookClient('552788807632814082', process.env.HOOK8)
-const hook9 = new Discord.WebhookClient('552789536825016347', process.env.HOOK9)
-const hook10 = new Discord.WebhookClient('569654217954820138', process.env.HOOK10)
-const hook11 = new Discord.WebhookClient('552790397546659840', process.env.HOOK11)
-const hook12 = new Discord.WebhookClient('552790736203022337', process.env.HOOK12)
+const hook9 = new Discord.WebhookClient('569654504589492228', process.env.HOOK9)
+const hook10 = new Discord.WebhookClient('552789978950664193', process.env.HOOK10)
+const hook11 = new Discord.WebhookClient('569654217954820138', process.env.HOOK11)
+const hook12 = new Discord.WebhookClient('569654663138508821', process.env.HOOK12)
 const hook13 = new Discord.WebhookClient('552791077346738186', process.env.HOOK13)
-
+const hook14 = new Discord.WebhookClient('569654940939845682', process.env.HOOK14)
 
 const TelegramBot = require('node-telegram-bot-api');
 
@@ -560,6 +560,37 @@ else
         else
         {
             hook13.send(msg.text)
+        } 
+    }
+    if(chatId == -1001460337367)
+    {
+        console.log(14)
+        if(msg.photo != undefined)
+        {
+          var id = msg.photo[msg.photo.length - 1].file_id
+        bot5.getFile(id).then(sf=>{
+            console.log(sf.file_path)
+        })
+            bot5.getFileLink(id).then(sd=>  {
+               console.log(msg.caption)
+                if(msg.caption == undefined)
+                {
+                    var embeds = new Discord.RichEmbed()
+                    .setImage(sd)
+                   hook14.send(embeds)
+                }
+              else
+              {
+                var embeds = new Discord.RichEmbed()
+                .setImage(sd)
+                .setDescription(msg.caption)
+                hook14.send(embeds)
+              }
+              })
+        }
+        else
+        {
+            hook14.send(msg.text)
         } 
     }
 
