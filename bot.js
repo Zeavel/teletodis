@@ -32,6 +32,7 @@ const bot5 = new TelegramBot(process.env.BOT5, {polling: true} );
 bot.on('channel_post', (msg) => {
   const chatId = msg.chat.id;
   console.log(msg)
+  console.log(1)
 if(msg.photo != undefined)
 {
     var id = msg.photo[msg.photo.length - 1].file_id
@@ -62,6 +63,7 @@ else
 });
 bot2.on('channel_post', (msg) => {
   console.log(msg)
+  console.log(2)
     const chatId = msg.chat.id;
   if(msg.photo != undefined)
   {
@@ -93,6 +95,7 @@ bot2.on('channel_post', (msg) => {
   });
   bot3.on('channel_post', (msg) => {
     console.log(msg)
+    console.log(3)
     const chatId = msg.chat.id;
   if(msg.photo != undefined)
   {
@@ -123,8 +126,10 @@ bot2.on('channel_post', (msg) => {
   }
   });
   bot4.on('channel_post', (msg) => {
+   
     const chatId = msg.chat.id;
     console.log(msg)
+     console.log(4)
   if(msg.photo != undefined)
   {
     var id = msg.photo[msg.photo.length - 1].file_id
@@ -155,6 +160,7 @@ bot2.on('channel_post', (msg) => {
   });
   bot5.on('channel_post', (msg) => {
     console.log(msg)
+     console.log(5)
     const chatId = msg.chat.id;
     console.log("post")
 if(msg.text.startsWith("/add"))
