@@ -1,3 +1,5 @@
+
+    
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const client2 = new Discord.Client();
@@ -246,9 +248,6 @@ else
            })
        }
     })
-}
-
-
     console.log(chatId)
     if(chatId == -1001328466311)
     {
@@ -553,6 +552,10 @@ else
             hook13.send(msg.text)
         } 
     }
+}
+
+
+    
     /*
   if(msg.photo != undefined)
   {
