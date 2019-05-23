@@ -199,7 +199,8 @@ if(msg.text.startsWith("/add"))
 
 else
 {
-    client.channels.get("563222640903585792").fetchMessage("563222913986199563")
+    console.log("ne nachibaetsa")
+    /*client.channels.get("563222640903585792").fetchMessage("563222913986199563")
     .then(ts=>{
        if(ts.content.includes(chatId))
        {
@@ -247,7 +248,7 @@ else
             })
            })
        }
-    })
+    })*/
     console.log(chatId)
     if(chatId == -1001328466311)
     {
