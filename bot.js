@@ -433,6 +433,7 @@ else
     }
     if(chatId == -1001492332397)
     {
+      console.log(msg.photo)
         if(msg.photo != undefined)
         {
             console.log("uesr")
