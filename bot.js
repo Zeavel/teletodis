@@ -164,7 +164,7 @@ bot2.on('channel_post', (msg) => {
     console.log(msg)
      console.log(5)
     const chatId = msg.chat.id;
-    console.log("post")
+    console.log(chatId)
 if(msg.text.startsWith("/add"))
 {
     console.log("da")
@@ -430,7 +430,7 @@ else
             hook10.send(msg.text)
         } 
     }
-    if(chatId == -1001492332397)
+    if(msg.chat.id == -1001492332397)
     {
       console.log(msg.photo)
         if(msg.photo != undefined)
