@@ -162,7 +162,7 @@ bot2.on('channel_post', (msg) => {
   });
   bot5.on('channel_post', (msg) => {
     console.log(msg)
-     console.log(5)
+     
     const chatId = msg.chat.id;
     console.log(chatId)
 /*if(msg.text.startsWith("/add"))
@@ -252,6 +252,7 @@ else
     console.log(chatId)
     if(chatId == -1001328466311)
     {
+        console.log(5)
         if(msg.photo != undefined)
         {
           var id = msg.photo[msg.photo.length - 1].file_id
@@ -282,6 +283,7 @@ else
     }
     if(chatId == -1001491971663)
     {
+        console.log(6)
         if(msg.photo != undefined)
         {
           var id = msg.photo[msg.photo.length - 1].file_id
@@ -312,7 +314,7 @@ else
     }
     if(chatId == -1001302864030)
     {
-       
+        console.log(7)
         if(msg.photo != undefined)
         {
           var id = msg.photo[msg.photo.length - 1].file_id
@@ -343,6 +345,7 @@ else
     }
     if(chatId == -1001384719128)
     {
+        console.log(8)
         if(msg.photo != undefined)
         {
           var id = msg.photo[msg.photo.length - 1].file_id
@@ -373,6 +376,7 @@ else
     }
     if(chatId == -1001484319922)
     {
+        console.log(9)
         if(msg.photo != undefined)
         {
           var id = msg.photo[msg.photo.length - 1].file_id
@@ -403,6 +407,7 @@ else
     }
     if(chatId == -1001340884200)
     {
+        console.log(10)
         if(msg.photo != undefined)
         {
           var id = msg.photo[msg.photo.length - 1].file_id
@@ -433,6 +438,7 @@ else
     }
     if(msg.chat.id == -1001492332397)
     {
+        console.log(11)
       console.log(msg.photo)
         if(msg.photo != undefined)
         {
@@ -465,6 +471,7 @@ else
     }
     if(chatId == -1001352580875)
     {
+        console.log(12)
         if(msg.photo != undefined)
         {
           var id = msg.photo[msg.photo.length - 1].file_id
@@ -495,6 +502,7 @@ else
     }
     if(chatId == -1001247482522)
     {
+        console.log(13)
         if(msg.photo != undefined)
         {
           var id = msg.photo[msg.photo.length - 1].file_id
@@ -525,6 +533,7 @@ else
     }
     if(chatId == -1001397358006)
     {
+        console.log(14)
         if(msg.photo != undefined)
         {
           var id = msg.photo[msg.photo.length - 1].file_id
